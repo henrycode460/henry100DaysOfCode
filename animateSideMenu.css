@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+
+}
+
+.sideBar{
+    position: fixed;
+    left: -250px;
+    width: 250px ;
+    height: 100%;
+    background: #042331;
+    transition: all .5s ease;
+
+
+}
+
+.sideBar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: black;
+    user-select: none;
+}
+
+.sideBar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 60px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 3px solid rgb(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    transition:  0.2s;
+    text-decoration: none;
+}
+
+ul li:hover a {
+    padding-left: 50px;
+}
+
+.sideBar ul a i
+{
+    margin-right:16px ;
+
+}
+
+#check{
+    display:none;
+}
+
+label #btn {
+    position: absolute;
+    cursor: pointer;
+    background-color:#042331 ;
+    border-radius: 3px;
+}
+
+/* label #btn{
+    left: 40px;
+    top:25px;
+    font-size: 25px;
+    color: red;
+    padding: 6px 12px;
+    transition: all 0.5s;
+} */
+
+label #cancel{
+    z-index: 1111;
+    left: -1px;
+    margin-top: 30px;
+    top:10px;
+    font-size: 30px;
+    color: red;
+    padding: 4px 9px;
+    transition: all 0.5s ease;
+    position: absolute;
+    cursor: pointer;
+    background-color:  black;
+    border-radius: 3px;
+}
+
+#check:checked ~ .sideBar{
+    left: 0;
+
+}
+
+#check:checked~  #btn{
+    left: 495px;
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+#check:checked~  #cancel{
+    left: -195px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+section{
+    background: url(Images/background2.webp);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all 0.3s;
+
+}
+
+#check:checked~ section{
+  margin-left: 250px;
+}
