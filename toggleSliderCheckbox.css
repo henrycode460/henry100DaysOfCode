@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* 1. Height the default checkbox */
+
+input[type=checkbox] {
+    display: none;
+}
+
+/* 2. Create the slider base and knob */
+
+label{
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 25px;
+    position: relative;
+    transition: all 0.4s ease-out;
+}
+
+label:after{
+    content: ' ';
+    position: absolute;
+    top:5px;
+    left:5px;
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    border-radius: 50%;
+    transition: all 0.4s ease-out;
+}
+
+/* 3. Create the Styling for the checked state */
+
+input:checked + label{
+    background: black;
+
+}
+
+input:checked + label:after {
+    transform: translate3d(50px, 0,0);
+    background-color: #1d6269;
+}
