@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hambuger Menu</title>
+    <link rel="stylesheet" href="fullScreenNavigation.css">
+    
+</head>
+<body>
+
+    <a href="#" class="hambuger-button">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </a>
+
+    <div class="overlay">
+        <nav class="menu">
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+    
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    
+    <script>
+        $(function(){
+        $('.hambuger-button').on ('click', function(event) {
+        event.preventDefault();
+
+        $(this) .toggleClass('active');
+        $('.overlay').toggleClass('visible');
+        
+
+    });
+
+    });
+        </script>
+    
+</body>
+</html>

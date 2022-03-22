@@ -1,0 +1,153 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+ }
+ 
+ /* 1. Style Hamburger Icon */
+ .hambuger-button{
+     position: absolute;
+     width: 45px;
+     height: 34px;
+     transition: all .3s ease-in-out;
+     display: block;
+     top: 2rem;
+     right: 2rem;
+     z-index: 100;
+ }
+ 
+ .hambuger-button span{
+     position: absolute;
+     height: 8px;
+     border-radius: 4px;
+     width: 100%;
+     background-color: #3d4146;
+     
+     top: 0;
+     transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+ }
+ 
+ .hambuger-button span:nth-child(1){
+     top:0px;
+ 
+ }
+ .hambuger-button span:nth-child(2),
+ .hambuger-button span:nth-child(3){
+     top: 13px;
+ 
+ }
+ 
+ .hambuger-button span:nth-child(4){
+     top:26px;
+ 
+ }
+ 
+ /* 2. Style the active state and create the cross */
+ .hambuger-button.active span:nth-child(1),
+ .hambuger-button.active span:nth-child(4){
+    opacity: 0;
+ }
+ 
+ .hambuger-button.active span:nth-child(2){
+     transform: rotate(45deg);
+ 
+ }
+ 
+ .hambuger-button.active span:nth-child(3){
+     transform: rotate(-45deg);
+ 
+ }
+
+
+ /* styling overlay and nagivation */
+ .overlay{
+     position: fixed;
+     background: green;
+      top: 0;
+     left: 0;
+     width: 100%;
+     height: 0px;
+     opacity: 0;
+     visibility: hidden;
+     display: flex;
+     align-items: center;
+     justify-content: center; 
+     transition: opacity .3s, visibility .3s height .3s;
+     
+ }
+
+ .menu{
+     font-size: 2em;
+     font-family: Arial, Helvetica, sans-serif;
+     text-align: center;
+ }
+
+ .menu ul{
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+
+ .menu ul li{
+     opacity: 0 
+     margin: 1rem 0;
+ }
+
+ .menu ul li a{
+    margin: 1rem 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity .2s ease;
+    opacity: .75;
+     margin-top: 10px;
+}
+
+.menu ul li a:hover{
+    opacity: 1;
+}
+
+/* Add Animation */
+@keyframes fadeInLeft{
+0% {
+    opacity: 0;
+    transform: translate3d(-25%, 0, 0);
+}
+
+100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+
+}
+
+/* 3. Style the visible overlay */
+
+.overlay.visible{
+    opacity: 0.85;
+    visibility: visible;
+    height: 100%;
+}
+
+.overlay.overlay li{
+    animation: fadeInLeft .2s ease forwards;
+}
+
+.overlay.visible li:nth-child(1){
+    animation-delay: .23s;
+}
+.overlay.visible li:nth-child(2){
+    animation-delay: .23s;
+}
+.overlay.visible li:nth-child(3){
+    animation-delay: .23s;
+}
+.overlay.visible li:nth-child(4){
+    animation-delay: .23s;
+}
+
+a{
+    line-height: 50px;
+}
