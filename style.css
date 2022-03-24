@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+.cokie_container{
+    background: linear-gradient(250deg, #9b6c50 0%, #4f2626 100% );
+    position: absolute;
+    top: 50%;
+    left:30%;
+    transform: translate(-50%, -50%);
+    color:white;
+    display: flex;
+    width: 20rem;
+    height: 10rem;
+    border-radius: 1.2em;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+
+
+.cokie{
+    width: 180px;
+    height: 100px;
+    padding-right: 2rem;
+    transform: scale(0.6);
+}
+
+.cokie_title{
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.cokie-subtitle{
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 0.5rem 0rem;
+
+}
+
+button{
+    padding: 0.5rem 1rem;
+    border-style: none;
+    color: #4f2626;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 0.4rem;
+}
