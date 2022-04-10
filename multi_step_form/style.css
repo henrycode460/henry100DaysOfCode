@@ -1,0 +1,93 @@
+.card{
+    background-color: white;
+    border: 1px solid #333;
+    border-radius: .5rem;
+    padding: .5rem;
+    max-width: 300px;
+    margin: 0 auto;
+    animation: fade  ease-in-out forwards ;
+    background-color: rgb(176, 176, 206);
+
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .25rem;
+    gap: .25rem;
+ 
+}
+
+.form-group:last-child{
+    margin: 0;
+}
+
+.form-group > label {
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+}
+
+.form-group > input{
+    border-radius: .25em;
+    border: 1px solid #333;
+    font-size: 1rem;
+    padding: .25em;
+}
+
+.step-title{
+    margin: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.active{
+    display: block;
+}
+
+.card.active{
+     /* display: block;  */
+    
+    animation: slide 500ms ease-in-out both;
+}
+
+.multi-step-form{
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes slide {
+    0%{
+        opacity: 0;
+        transform: translateX(200%);
+
+
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+
+@keyframes fade {
+    0%{
+        transform: scale(1);
+        opacity: 0;
+
+    }
+        
+        50%{
+            transform: scale(-75);
+            opacity: 0;
+            height: auto;
+        }
+
+    100%{
+        transform: scale(0);
+        height: 0;
+        display: none;
+    }
+    
+}
