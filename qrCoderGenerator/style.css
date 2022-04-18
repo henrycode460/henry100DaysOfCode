@@ -1,0 +1,60 @@
+*, 
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.qr-box{
+    display: grid;
+    
+    grid-row-gap: 5px;
+}
+
+img{
+    margin-top: 20px;
+    height: 300px;
+    width: 300px;
+  
+    border: 4px solid yellow;
+    border-radius: 0.5rem;
+ 
+}
+
+textarea{
+    height: 100px;
+    outline: none;
+    border: 2px solid yellow;
+  
+    border-radius: 0.5rem;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+button{
+   
+    border: none;
+    /* outline: none; */
+    font-size: 1rem;
+    background-color: #bada55;
+  
+    height: 50px;
+    border-radius: 1rem;
+}
+
+button:hover{
+    background-color: #a4be4b;
+}
