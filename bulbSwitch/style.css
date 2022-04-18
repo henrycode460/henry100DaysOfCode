@@ -1,0 +1,25 @@
+#container{
+    height: 100px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.bulboff
+{
+    width: 1000px;
+    height: 900px;
+    background-image: url("light-bulb.jpg") ;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+} 
+
+ .bulbon
+{
+    width: 500px;
+    height: 900px;
+    background-image: url("lighhhh.jpg") ;
+    background-repeat: no-repeat;
+    margin: auto;
+} 
