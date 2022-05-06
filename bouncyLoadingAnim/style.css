@@ -1,0 +1,52 @@
+body{
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.loader{
+    width: 120px;
+    height: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    
+}
+
+.loader span{
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: auto;
+    color: yellow;
+}
+
+.ball{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: bounce .5s alternate infinite;
+ 
+
+}
+
+.ball:nth-child(2){
+    animation-delay: .16s;
+}
+
+.ball:nth-child(3){
+    animation-delay: .16s;
+}
+
+@keyframes bounce {
+    from{
+        transform: scaleX(1.25);
+    }
+
+    to{
+        transform: translateY(-50px) scaleX(1);
+    }
+}
